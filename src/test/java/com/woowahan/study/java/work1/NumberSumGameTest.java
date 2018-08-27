@@ -1,5 +1,6 @@
 package com.woowahan.study.java.work1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -16,7 +17,12 @@ import static org.junit.Assert.assertThat;
 
 public class NumberSumGameTest {
 
-    private NumberSumGame numberSumGame = new NumberSumGame();
+    private NumberSumGame numberSumGame;
+
+    @Before
+    public void setUp() throws Exception {
+        numberSumGame = new NumberSumGame();
+    }
 
     @Test
     public void 입출력_예제1() {
