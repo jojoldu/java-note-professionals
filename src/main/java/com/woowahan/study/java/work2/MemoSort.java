@@ -13,12 +13,9 @@ import java.util.stream.Collectors;
 public class MemoSort {
 
     public List<String> sortMemo(List<String> memos) {
-        List<Memo> memoList = memos.stream()
+        return memos.stream()
                 .map(Memo::new)
                 .sorted(Comparator.comparing(Memo::getDate))
-                .collect(Collectors.toList());
-
-        return memoList.stream()
                 .map(Memo::getMemo)
                 .collect(Collectors.toList());
     }
